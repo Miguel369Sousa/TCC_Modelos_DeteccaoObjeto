@@ -9,7 +9,6 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.clock import Clock
 from kivy.uix.image import Image
 
-
 def save_scale_ratio(scale_ratio, file_name='scale_ratio.txt'):
     with open(file_name, 'w') as file:
         file.write(str(scale_ratio))
@@ -43,7 +42,6 @@ else:
     hx.set_scale_ratio(scale_ratio)  # Usa o fator de escala salvo
 
 model = YOLO(r'/home/miguel/Yolo/Yolo/TCC_Teste-master/scripts/runs/detect/train_3_yolo11s_150epocas_640escala_2336data/weights/best.pt')  # Ajuste para o caminho correto
-
 precos_por_kg = {
     'BATATA_BOLINHA':11.99,
     'BATATA_MONALISA':6.99,
@@ -54,7 +52,6 @@ precos_por_kg = {
     'MACA_RED':15.99,
     'TANGERINA':12.99
 }
-
 peso_anterior = None
 diferenca_peso_minimo = 6
 confidence_minima = 0.70
@@ -62,7 +59,6 @@ confidence_minima = 0.70
 class DetectorApp(App):
     def build(self):
         self.layout = BoxLayout(orientation='vertical')
-
         self.peso_label = Label(text="Peso: Calculando...", font_size='20sp', size_hint=(1,0.25))
         self.classe_label = Label(text="Classe: Detectando...", font_size='20sp', size_hint=(1,0.1))
         self.preco_label = Label(text="Preco: Calculando...", font_size='20sp', size_hint=(1,0.25))
@@ -137,5 +133,4 @@ class DetectorApp(App):
 
 if __name__ == "__main__":
     DetectorApp().run()
-
     GPIO.cleanup()
