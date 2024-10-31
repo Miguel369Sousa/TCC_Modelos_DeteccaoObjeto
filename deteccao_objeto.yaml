@@ -1,0 +1,7 @@
+path: C:\TCC\Treinamento\data_deteccao_objeto_2336
+train: C:\TCC\Treinamento\data_deteccao_objeto_2336\treinamento
+val: C:\TCC\Treinamento\data_deteccao_objeto_2336\validacao
+test: C:\TCC\Treinamento\data_deteccao_objeto_2336\teste
+
+nc: 8  # Número de classes
+names: ['BATATA_BOLINHA', 'BATATA_MONALISA', 'BATATINHA_ROSA', 'LARANJA_PERA_RIO', 'MACA_FUJI', 'MACA_PINK', 'MACA_RED', 'TANGERINA']
